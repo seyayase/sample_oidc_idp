@@ -56,13 +56,9 @@ Doorkeeper::OpenidConnect.configure do
   # expiration 600
 
   # Example claims:
-  # claims do
-  #   normal_claim :_foo_ do |resource_owner|
-  #     resource_owner.foo
-  #   end
-
-  #   normal_claim :_bar_ do |resource_owner|
-  #     resource_owner.bar
-  #   end
-  # end
+  claims do
+    normal_claim :email, scope: :openid do |resource_owner|
+      resource_owner.email
+    end
+  end
 end
