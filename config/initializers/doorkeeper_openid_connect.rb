@@ -5,11 +5,7 @@ Doorkeeper::OpenidConnect.configure do
     ENV["OIDC_ISSUER"]
   end
 
-  signing_key <<~KEY
-    -----BEGIN RSA PRIVATE KEY-----
-    ....
-    -----END RSA PRIVATE KEY-----
-  KEY
+  signing_key File.read(Rails.root.join("jwtRS256.key"))
 
   subject_types_supported [:public]
 
