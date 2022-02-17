@@ -36,3 +36,4 @@ yarn-debug.log*
 .yarn-integrity
 
 jwtRS256.key
+.env

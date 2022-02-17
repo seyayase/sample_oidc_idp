@@ -2,7 +2,7 @@
 
 Doorkeeper::OpenidConnect.configure do
   issuer do |resource_owner, application|
-    'issuer string'
+    ENV["OIDC_ISSUER"]
   end
 
   signing_key <<~KEY
