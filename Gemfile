@@ -47,3 +47,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # for user authentication
 gem "devise"
+
+# for oidc IdP
+gem "doorkeeper"
+gem "doorkeeper-openid_connect"
